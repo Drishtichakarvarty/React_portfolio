@@ -1,13 +1,318 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #111827;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: #000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.nav-links a:hover {
+  color: #22c55e;
+}
+
+/* Hero */
+.hero {
+  background: url("../public/bg.jpeg") center/cover no-repeat; /* place bg.jpg in public */
+  text-align: center;
+  padding: 5rem 1rem;
+  color: white;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+.role {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.btn {
+  background: #22c55e;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.btn.outline {
+  background: transparent;
+  border: 2px solid #22c55e;
+  color: #22c55e;
+}
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* About */
+.about {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.about-left, .about-right {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+/* Skills css */
+
+.skills {
+  padding: 50px 0;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skills-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.bar {
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 12px;
+  border-radius: 20px;
+}
+
+.progress.html {
+  width: 90%;
+  background: #e34c26;
+}
+
+.progress.css {
+  width: 85%;
+  background: #264de4;
+}
+
+.progress.js {
+  width: 75%;
+  background: #f0db4f;
+}
+
+.progress.react {
+  width: 70%;
+  background: #61dbfb;
+}
+
+/* Portfolio CSS  */
+
+.portfolio {
+  padding: 50px 0;
+}
+
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.portfolio-item h3 {
+  margin: 15px 0 10px;
+}
+
+.portfolio-item a {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.portfolio-item a:hover {
+  background: #555;
+}
+
+/* Experience CSS  */
+
+.experience {
+  padding: 50px 0;
+}
+
+.experience h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.experience-item {
+  background: #fff;
+  border-left: 4px solid #333;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.experience-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.experience-item .year {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+/* Contact CSS  */
+
+.contact {
+  padding: 50px 0;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-content {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.contact-form button:hover {
+  background: #555;
+}
+
+/* Footer CSS  */
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer .back-to-top {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer .back-to-top:hover {
+  color: #ff9800;
 }
