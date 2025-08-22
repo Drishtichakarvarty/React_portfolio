@@ -9,7 +9,6 @@ export default function Skills() {
             <div className="progress html"></div>
           </div>
         </div>
-        
         <div className="skill">
           <h3>CSS</h3>
           <div className="bar">

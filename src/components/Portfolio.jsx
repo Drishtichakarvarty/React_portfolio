@@ -3,7 +3,6 @@ export default function Portfolio() {
     <section id="portfolio" className="portfolio container">
       <h2>Portfolio</h2>
       <div className="portfolio-grid">
-        
         <div className="portfolio-item">
           <img src="/project-1.jpg" alt="Project 1" />
           <h3>Personal Portfolio</h3>
@@ -11,7 +10,6 @@ export default function Portfolio() {
             View Project
           </a>
         </div>
-
         <div className="portfolio-item">
           <img src="/project-2.jpg" alt="Project 2" />
           <h3>Blog Website</h3>
